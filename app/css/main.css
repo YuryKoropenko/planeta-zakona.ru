@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/*Сброс*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small,
+strike, strong, sub, sup, tt, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, nav, output, ruby, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button, button:active, button:focus,
+input, input:active, input:focus {
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Внешние блоки*/
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.25;
+  font-family: "ProximaNovaRegular", sans-serif;
+  overflow-x: hidden;
+}
+
+.header__top {
+  padding: 18px 0;
+}
+
+.header__h-info {
+  text-align: center;
+}
+
+.header__h-phone {
+  display: inline-block;
+}
+
+.header__h-buttons {
+  display: inline-block;
+  font-size: 0;
+  padding-left: 15px;
+}
+
+.header__bottom {
+  background-color: #000;
+}
+
+.header__h-logo {
+  padding-top: 20px;
+  padding-bottom: 29px;
+}
+
+.header__h-nav {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+.header__h-social {
+  display: inline-block;
+  float: right;
+}
+
+/*Компоненты*/
+.h-email {
+  padding-left: 33px;
+  position: relative;
+  display: inline-block;
+}
+
+.h-email svg {
+  width: auto;
+  fill: #e2223f;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.h-email__link {
+  color: #333333;
+  border-bottom: 1px solid #d7d7d7;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.h-email__link:hover, .h-email__link:focus, .h-email__link:active {
+  color: #333333;
+  text-decoration: none;
+  color: #333333;
+  border-bottom-color: transparent;
+}
+
+.h-email__link:active {
+  border-bottom-color: #d7d7d7;
+}
+
+.h-phone {
+  display: inline-block;
+  position: relative;
+  padding-left: 23px;
+}
+
+.h-phone svg {
+  width: 12px;
+  fill: #333;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.h-phone__link {
+  display: inline-block;
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.h-phone__link:hover, .h-phone__link:focus, .h-phone__link:active {
+  text-decoration: none;
+  color: #333;
+}
+
+.h-phone__link:last-child::before {
+  content: '/';
+  margin: 0 5px;
+}
+
+.h-buttons {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.h-buttons:last-child {
+  padding-right: 0;
+}
+
+.h-buttons__link {
+  text-transform: uppercase;
+  color: #333333;
+  border-bottom: 1px solid #d7d7d7;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.h-buttons__link:hover, .h-buttons__link:focus, .h-buttons__link:active {
+  color: #333333;
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+.h-buttons__link:active {
+  border-bottom-color: #d7d7d7;
+}
+
+.h-logo {
+  display: inline-block;
+}
+
+.h-logo svg {
+  width: 115px;
+  display: block;
+  fill: #fff;
+}
+
+.h-nav {
+  font-size: 0;
+}
+
+.h-nav__item {
+  display: inline-block;
+  position: relative;
+  padding: 0 26px;
+}
+
+.h-nav__link {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  padding: 33px 0 34px;
+  line-height: 8px;
+  min-width: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.h-nav__link:hover, .h-nav__link:focus, .h-nav__link:active {
+  text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.h-social__item {
+  display: inline-block;
+}
+
+.h-social__link {
+  width: 20px;
+  height: 14px;
+  line-height: 20px;
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+.h-social__link svg {
+  fill: #fff;
+  display: block;
+}
+
+.h-social__link-1 svg {
+  width: 19px;
+}
+
+.h-social__link-2 svg {
+  width: 14px;
+}
+
+.h-social__link-3 svg {
+  width: 17px;
+}
+
+.h-social__link-4 svg {
+  height: 14px;
+}
+
+.h-social__link-5 svg {
+  width: 14px;
+}
+
+.h-social__link-6 svg {
+  width: 20px;
+}
+
+.h-social__link-7 svg {
+  height: 14px;
+}
+
+.h-social__link-8 svg {
+  width: 14px;
+}
+
+.h-social__link-9 svg {
+  width: 14px;
+}
+
+.h-search svg {
+  width: 13px;
+  fill: #fff;
+}
