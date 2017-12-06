@@ -88,6 +88,39 @@
 		display: inline-block
 		padding: 0 26px
 		position: relative
+		&:hover, &:focus, &:active
+			.h-nav__link
+				text-decoration: none
+				color: #fff
+				text-decoration: none
+				&::after
+					content: ''
+					z-index: 2
+					bottom: -3px
+					display: block
+					height: 3px
+					position: absolute
+					left: 0
+					right: 0
+					background-color: rgb(229, 57, 83)
+		&-menu
+			svg
+				display: none
+				width: 30px
+				height: 10px
+				position: absolute
+				bottom: -4px
+				fill: #fff
+				left: 0
+				right: 0
+				margin: 0 auto
+		&-active
+			svg
+				display: block
+			.h-nav__link
+				&:after
+					display: none !important
+
 	&__link
 		display: inline-block
 		text-transform: uppercase
@@ -99,10 +132,21 @@
 		min-width: 30px
 		text-align: center
 		font-size: 14px
+		position: relative
 		&:hover, &:focus, &:active
 			text-decoration: none
 			color: #fff
 			text-decoration: none
+			&::after
+				content: ''
+				z-index: 2
+				bottom: -3px
+				display: block
+				height: 3px
+				position: absolute
+				left: 0
+				right: 0
+				background-color: rgb(229, 57, 83)
 
 .h-social
 	font-size: 0
@@ -187,20 +231,257 @@
 					fill: #e62117
 
 .h-search
+	position: relative
+
 	svg
 		width: 13px
 		fill: #fff
 
 .h-subnav
-	position: fixed
-	top: 0
+	position: absolute
+	width: 100%
 	left: 0
 	right: 0
-	width: 1300px
-	margin: 0 auto
-	padding: 0 15px
+	top: 100%
+	background: #ffffff
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee')
+	background: -webkit-linear-gradient(top, #fff, #eeeeee)
+	background: -moz-linear-gradient(top, #fff, #eeeeee)
+	background: -o-linear-gradient(top, #fff, #eeeeee)
+	background: -ms-linear-gradient(top, #fff, #eeeeee)
+	background: linear-gradient(to bottom, #fff, #eeeeee)
+	display: none
+	z-index: 20
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -3px
+		height: 3px
+		background-color: #000
 	&__item
 		display: inline-block
+		padding: 0 26px
+		position: relative
 	&__link
-		font-size: 14px
+		display: inline-block
 		text-transform: uppercase
+		font-weight: bold
+		color: #000
+		text-decoration: none
+		padding: 28px 0 24px
+		line-height: 10px
+		min-width: 30px
+		text-align: center
+		font-size: 14px
+		position: relative
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #000
+			text-decoration: none
+			&::after
+				content: ''
+				z-index: 2
+				bottom: -3px
+				display: block
+				height: 3px
+				position: absolute
+				left: 0
+				right: 0
+				background-color: rgb(229, 57, 83)
+
+.h-dispatch
+	&__row
+		display: block
+		width: 100%
+	&__area
+		position: relative
+		display: inline-block
+	&__input
+		height: 34px
+		width: 853px
+		border: none
+		border-radius: 20px
+		padding: 2px 52px 2px 20px
+		font-size: 13px
+	&__button
+		position: absolute
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background-color: #000
+		background-image: url(../img/arrow.svg)
+		background-repeat: no-repeat
+		background-position: center center
+		right: 2px
+		top: 2px
+		border: none
+		text-indent: -9999px
+		background-size: 11px auto
+	&__info
+		position: relative
+		padding-left: 36px
+		display: inline-block
+		margin-left: 20px
+		min-height: 18px
+	&__close
+		width: 28px
+		height: 28px
+		display: block
+		position: absolute
+		transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		z-index: 2
+		left: 0
+		&::before
+			content: ''
+			height: 28px
+			width: 2px
+			background-color: #fff
+			display: block
+			position: absolute
+			left: 50%
+			top: 0
+			margin-left: -1px
+		&::after
+			content: ''
+			width: 28px
+			height: 2px
+			background-color: #fff
+			display: block
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -1px
+	&__link
+		line-height: 28px
+		font-size: 8pt
+		text-decoration: underline
+		color: #fff
+		display: inline-block
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #fff
+		&:active
+			text-decoration: underline
+	&__description
+		color: #fff
+		font-size: 10px
+		padding-top: 5px
+		display: block
+		padding-left: 20px
+		a
+			color: #fff
+			text-decoration: underline
+			&:hover, &:focus, &:active
+				text-decoration: none
+				color: #fff
+			&:active
+				text-decoration: underline
+
+.p-path
+	font-size: 0
+	&__item
+		display: inline-block
+		padding-right: 20px
+		position: relative
+		&::after
+			content: '/'
+			width: 20px
+			display: block
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+			font-size: 14px
+			color: #fff
+			text-align: center
+		&:last-child
+			padding-right: 0
+			&::after
+				display: none
+	&__link
+		color: #fff
+		text-decoration: underline
+		font-size: 14px
+		display: block
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #fff
+		&:active
+			text-decoration: underline
+	&__last
+		color: #fff
+		font-size: 14px
+		display: block
+
+.p-info
+	position: relative
+	margin-bottom: 30px
+	&__data
+		display: inline-block
+		color: #999999
+		font-size: 14px
+	&__name
+		display: inline-block
+		margin-left: 35px
+		border-bottom: 1px solid #f0d5d8
+		font-size: 14px
+		color: #e2223f
+		font-family: "ProximaNovaBold", sans-serif
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #e2223f
+			border-bottom-color: transparent
+		&:active
+			border-bottom-color: #f0d5d8
+	&__share
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		height: 40px
+		padding: 13px 13px 12px 13px
+		color: #999
+		background-color: #f5f5f5
+		border-radius: 15px
+		cursor: pointer
+		width: auto
+	&__text
+		padding: 0 15px 0 10px
+		font-family: "ProximaNovaBold", sans-serif
+		line-height: 14px
+		font-size: 14px
+
+.p-time
+	padding: 9px 0
+	border-top: 1px solid #f1f1f1
+	border-bottom: 1px solid #f1f1f1
+	&__reading
+		display: inline-block
+		color: #666
+		font-size: 14px
+		padding-left: 25px
+		strong
+			font-family: "ProximaNovaBold", sans-serif
+	&__notime
+		display: inline-block
+		height: 32px
+		text-decoration: none
+		padding: 9px 16px
+		margin-left: 15px
+		border-radius: 15px
+		background-color: #e2223f
+		line-height: 14px
+		font-size: 14px
+		color: #fff
+		font-family: "ProximaNovaBold", sans-serif
+	&__comments
+		padding-left: 25px
+		line-height: 13px
+		margin-top: 10px
+		cursor: pointer
+		position: relative
+		transition: all 0.3s ease

@@ -27,3 +27,9 @@
   font-family: "ProximaNovaExtrabld";
   src: url("../fonts/ProximaNova/ProximaNova-Extrabld.ttf");
 }
+
+/* font-family: "AmazingGroteskUltra" */
+@font-face {
+  font-family: "AmazingGroteskUltra";
+  src: url("../fonts/AmazingGrotesk/AmazingGroteskUltra.otf");
+}
