@@ -86,8 +86,8 @@
 	font-size: 0
 	&__item
 		display: inline-block
-		position: relative
 		padding: 0 26px
+		position: relative
 	&__link
 		display: inline-block
 		text-transform: uppercase
@@ -95,7 +95,7 @@
 		color: #fff
 		text-decoration: none
 		padding: 33px 0 34px
-		line-height: 8px
+		line-height: 10px
 		min-width: 30px
 		text-align: center
 		font-size: 14px
@@ -105,47 +105,102 @@
 			text-decoration: none
 
 .h-social
+	font-size: 0
 	&__item
 		display: inline-block
+		margin-right: 4px
 	&__link
-		width: 20px
-		height: 14px
-		line-height: 20px
-		text-align: center
-		position: relative
 		display: block
+		position: relative
+		height: 14px
+		width: 20px
 		svg
 			fill: #fff
 			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
 		&-1
 			svg
 				width: 19px
+				margin-left: -10px
+			&:hover
+				svg
+					fill: #6182aa
 		&-2
 			svg
 				width: 14px
+				margin-left: -7px
+			&:hover
+				svg
+					fill: url(#wood)
 		&-3
 			svg
 				width: 17px
+				margin-left: -8.5px
+			&:hover
+				svg
+					fill: #1da1f2
 		&-4
 			svg
 				height: 14px
+				margin-left: -7px
+			&:hover
+				svg
+					fill: #3b5998
 		&-5
 			svg
 				width: 14px
+				margin-left: -7px
+			&:hover
+				svg
+					fill: #179cde
 		&-6
 			svg
 				width: 20px
+				margin-left: -10px
+			&:hover
+				svg
+					fill: #d73d32
 		&-7
 			svg
 				height: 14px
+				margin-left: -7px
+			&:hover
+				svg
+					fill: #ee8208
 		&-8
 			svg
 				width: 14px
+				margin-left: -7px
+			&:hover
+				svg
+					fill: #ff8c00
 		&-9
 			svg
 				width: 14px
+				margin-left: -7px
+			&:hover
+				svg
+					fill: #e62117
 
 .h-search
 	svg
 		width: 13px
 		fill: #fff
+
+.h-subnav
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	width: 1300px
+	margin: 0 auto
+	padding: 0 15px
+	&__item
+		display: inline-block
+	&__link
+		font-size: 14px
+		text-transform: uppercase

@@ -67,6 +67,9 @@ body {
 .header__h-logo {
   padding-top: 20px;
   padding-bottom: 29px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
 }
 
 .header__h-nav {
@@ -78,9 +81,19 @@ body {
   text-align: center;
 }
 
+.header__h-wrapper {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .header__h-social {
   display: inline-block;
-  float: right;
+}
+
+.header__h-search {
+  display: inline-block;
 }
 
 /*Компоненты*/
@@ -197,8 +210,8 @@ body {
 
 .h-nav__item {
   display: inline-block;
-  position: relative;
   padding: 0 26px;
+  position: relative;
 }
 
 .h-nav__link {
@@ -208,7 +221,7 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 33px 0 34px;
-  line-height: 8px;
+  line-height: 10px;
   min-width: 30px;
   text-align: center;
   font-size: 14px;
@@ -220,61 +233,133 @@ body {
   text-decoration: none;
 }
 
+.h-social {
+  font-size: 0;
+}
+
 .h-social__item {
   display: inline-block;
+  margin-right: 4px;
 }
 
 .h-social__link {
-  width: 20px;
-  height: 14px;
-  line-height: 20px;
-  text-align: center;
-  position: relative;
   display: block;
+  position: relative;
+  height: 14px;
+  width: 20px;
 }
 
 .h-social__link svg {
   fill: #fff;
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 
 .h-social__link-1 svg {
   width: 19px;
+  margin-left: -10px;
+}
+
+.h-social__link-1:hover svg {
+  fill: #6182aa;
 }
 
 .h-social__link-2 svg {
   width: 14px;
+  margin-left: -7px;
+}
+
+.h-social__link-2:hover svg {
+  fill: url(#wood);
 }
 
 .h-social__link-3 svg {
   width: 17px;
+  margin-left: -8.5px;
+}
+
+.h-social__link-3:hover svg {
+  fill: #1da1f2;
 }
 
 .h-social__link-4 svg {
   height: 14px;
+  margin-left: -7px;
+}
+
+.h-social__link-4:hover svg {
+  fill: #3b5998;
 }
 
 .h-social__link-5 svg {
   width: 14px;
+  margin-left: -7px;
+}
+
+.h-social__link-5:hover svg {
+  fill: #179cde;
 }
 
 .h-social__link-6 svg {
   width: 20px;
+  margin-left: -10px;
+}
+
+.h-social__link-6:hover svg {
+  fill: #d73d32;
 }
 
 .h-social__link-7 svg {
   height: 14px;
+  margin-left: -7px;
+}
+
+.h-social__link-7:hover svg {
+  fill: #ee8208;
 }
 
 .h-social__link-8 svg {
   width: 14px;
+  margin-left: -7px;
+}
+
+.h-social__link-8:hover svg {
+  fill: #ff8c00;
 }
 
 .h-social__link-9 svg {
   width: 14px;
+  margin-left: -7px;
+}
+
+.h-social__link-9:hover svg {
+  fill: #e62117;
 }
 
 .h-search svg {
   width: 13px;
   fill: #fff;
+}
+
+.h-subnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.h-subnav__item {
+  display: inline-block;
+}
+
+.h-subnav__link {
+  font-size: 14px;
+  text-transform: uppercase;
 }
