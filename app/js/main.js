@@ -35,4 +35,13 @@ $(function() {
 		return false;
 	});
 
+	/*поделиться*/
+	$('.p-info__share').hover(function() {
+		$(this).children('.p-info__text').hide();
+		$(this).children('.p-info__hidden').show();
+	}, function() {
+		$(this).children('.p-info__hidden').hide();
+		$(this).children('.p-info__text').show();
+	});
+
 });

@@ -22,6 +22,12 @@
   src: url("../fonts/ProximaNova/ProximaNova-Light.ttf");
 }
 
+/* font-family: "ProximaNovaRegularIt" */
+@font-face {
+  font-family: "ProximaNovaRegularIt";
+  src: url("../fonts/ProximaNova/ProximaNova-RegularIt.ttf");
+}
+
 /* font-family: "ProximaNovaExtrabld" */
 @font-face {
   font-family: "ProximaNovaExtrabld";
@@ -32,4 +38,10 @@
 @font-face {
   font-family: "AmazingGroteskUltra";
   src: url("../fonts/AmazingGrotesk/AmazingGroteskUltra.otf");
+}
+
+/* font-family: "AmazingGroteskBook" */
+@font-face {
+  font-family: "AmazingGroteskBook";
+  src: url("../fonts/AmazingGrotesk/AmazingGroteskBook.otf");
 }

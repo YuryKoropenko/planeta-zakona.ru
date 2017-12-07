@@ -40,3 +40,83 @@ ol, ul
 		line-height: 47px
 		color: #fff
 		font-family: "AmazingGroteskUltra", sans-serif
+
+.p-content
+	p
+		font-size: 20px
+		line-height: 1.7
+		padding-bottom: 30px
+		display: block
+		color: #333
+	h2
+		font-size: 30px
+		padding-bottom: 30px
+		font-family: "ProximaNovaBold", sans-serif
+		line-height: 30px
+	a
+		color: #e2223f
+		text-decoration: underline
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #e2223f
+		&:active
+			text-decoration: underline
+	img
+		display: block
+		width: 100%
+		height: auto
+	ul
+		padding-bottom: 30px
+		li
+			display: block
+			margin-left: 30px
+			padding-left: 30px
+			position: relative
+			line-height: 1.7
+			font-size: 20px
+			&::before
+				content: ''
+				width: 8px
+				height: 8px
+				border: 2px solid #e32d49
+				display: block
+				border-radius: 50%
+				position: absolute
+				left: 0
+				top: 13px
+	blockquote
+		margin: 10px 0 40px
+		display: block
+		font-size: 18px
+		line-height: 1.5em
+		padding: 38px 130px 38px 145px
+		font-family: "AmazingGroteskBook", sans-serif
+		background: #f6f6f6
+		position: relative
+		&::before
+			content: "“"
+			display: block
+			position: absolute
+			left: 90px
+			top: 55px
+			font-size: 70px
+			color: #e2223f
+			font-family: "ProximaNovaBold", sans-serif
+
+.p-img
+	margin-bottom: 25px
+	&__description
+		display: block
+		padding: 15px 0 25px
+		color: #999
+		font-size: 16px
+		font-family: "ProximaNovaRegularIt"
+
+.clearfix
+	&::before
+		content: ''
+		display: table
+	&::after
+		content: ''
+		display: table
+		clear: both
