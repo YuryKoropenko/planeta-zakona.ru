@@ -44,4 +44,20 @@ $(function() {
 		$(this).children('.p-info__text').show();
 	});
 
+	/*скрипт на троеточие*/
+	/*
+	var size = 70;
+	var newsContent = $('.p-article__title');
+	var newsText = newsContent.text();
+
+	if(newsText.length > size){
+		newsContent.text(newsText.slice(0, size) + ' ...');
+	}*/
+
+	/*vhod*/
+	$('.p-vhod__title').on('click', function() {
+		$(this).parent().children('.p-vhod__list').toggle();
+		return false;
+	});
+
 });

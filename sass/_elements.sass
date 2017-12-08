@@ -666,6 +666,23 @@
 	&__info
 		float: left
 		position: relative
+		.p-autor__link
+			font-size: 16px
+			position: absolute
+			line-height: 1.3em
+			display: inline-block
+			bottom: -39px
+			text-decoration: underline
+			color: #e2223f
+			left: 0
+			white-space: nowrap
+			cursor: pointer
+			line-height: 1.7
+			&:hover, &:focus, &:active
+				color: #e2223f
+				text-decoration: none
+			&:active
+				text-decoration: underline
 	&__title
 		font-size: 18px
 		color: #333
@@ -679,21 +696,6 @@
 		margin-bottom: 20px
 		margin-top: 0
 		font-size: 18px
-	&__link
-		font-size: 16px
-		position: absolute
-		line-height: 1.3em
-		display: inline-block
-		bottom: -32px
-		text-decoration: underline
-		color: #e2223f
-		left: 0
-		white-space: nowrap
-		cursor: pointer
-		line-height: 1.7
-		&:hover, &:focus, &:active
-			color: #e2223f
-			text-decoration: none
 	&__right
 		float: right
 		width: 50%
@@ -704,3 +706,300 @@
 		.p-autor__link
 			position: static
 			white-space: normal
+			text-decoration: underline
+			color: #e2223f
+			line-height: 1.7
+			display: inline-block
+			font-size: 16px
+			&:hover, &:focus, &:active
+				color: #e2223f
+				text-decoration: none
+
+.p-tags
+	display: block
+	width: 100%
+	padding: 10px 13px 10px 29px
+	background: #ededed
+	position: relative
+	&::before
+		content: '#'
+		display: block
+		font-size: 18px
+		position: absolute
+		left: 13px
+		top: 16px
+		font-family: "ProximaNovaBoldIt", sans-serif
+		color: #999
+	&__list
+		display: inline-block
+		font-size: 0
+	&__item
+		display: inline-block
+		padding-left: 10px
+	&__link
+		display: block
+		padding: 10px 20px
+		border-radius: 15px
+		background-color: #fff
+		color: #999
+		border-bottom: 1px solid 
+		font-size: 14px
+		line-height: 14px
+		@include transition(all 0.3s ease-in-out)
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #fff
+			background-color: #e53953
+		&:active
+			color: #999
+			background-color: #fff
+
+.p-copy
+	color: #333
+	display: block
+	font-family: "ProximaNovaRegularIt", sans-serif
+	font-size: 14px
+
+.p-rate
+	&__title
+		display: inline-block
+		margin: 1px 15px 0 0
+		color: #333
+		font-family: "ProximaNovaBold", sans-serif
+		font-size: 18px
+
+.p-readalso
+	&-title
+		padding-bottom: 10px
+		padding-top: 20px
+		display: block
+		color: #1a1a1a
+		font-size: 20px
+		font-family: "ProximaNovaSemibold", sans-serif
+
+.p-article
+	width: 25%
+	float: left
+	&__wrapper
+		display: block
+		padding: 15px
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #1a1a1a
+			background: #f0f1f2
+		&:active
+			background-color: transparent
+	&__top
+	&__img
+		display: block
+		width: 100%
+		height: auto
+	&__bottom
+		margin-top: 20px
+		height: 70px
+		overflow: hidden
+	&__title
+		color: #1a1a1a
+		font-family: "ProximaNovaSemibold", sans-serif
+		font-size: 18px
+
+.p-tabs
+	&__item
+		display: inline-block
+		color: #656c7a
+		font-size: 15px
+		padding: 12px 0
+		margin-right: 15px
+		font-family: "ProximaNovaBold", sans-serif
+		position: relative
+		cursor: pointer
+	&__item.active
+		color: #2a2e2e
+		&::after
+			content: ''
+			height: 2px
+			left: 0
+			position: absolute
+			display: block
+			z-index: 1
+			right: 0
+			bottom: -2px
+			background-color: rgb(226, 34, 63)
+
+.p-vhod
+	position: absolute
+	right: 0
+	top: 50%
+	transform: translateY(-50%)
+	-webkit-transform: translateY(-50%)
+	&__comment
+		position: relative
+		display: inline-block
+		margin-right: 5px
+		&::after
+			content: "\f075"
+			font-size: 18px
+			font-family: FontAwesome
+			display: block
+			color: #f05f70
+			font-size: 19px
+		span
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+			text-align: center
+			display: block
+			color: #fff
+			font-size: 12px
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #fff
+	&__vhod
+		display: inline-block
+		position: relative
+	&__title
+		display: inline-block
+		font-size: 15px
+		line-height: 1
+		font-family: "ProximaNovaBold", sans-serif
+		color: #2a2e2e
+		padding-right: 16px
+		&::after
+			content: "\f0d7"
+			display: block
+			position: absolute
+			right: 0
+			font-family: "FontAwesome"
+			font-size: 12px
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+		&:hover, &:focus, &:active
+			color: #2a2e2e
+			text-decoration: none
+	&__list
+		position: absolute
+		top: 100%
+		right: 0
+		font-size: 13px
+		border: 2px solid #687a86
+		border-radius: 3px
+		background: #fff
+		box-shadow: none
+		min-width: 130px
+		z-index: 100
+		padding: 4px 0
+		display: none
+	&__item
+		display: block
+	&__link
+		color: #687a86
+		padding: 4px 15px
+		position: relative
+		display: block
+		&:hover, &:focus, &:active
+			background-color: #f05f70
+			color: #fff
+			text-decoration: none
+		&:active
+			color: #687a86
+			background-color: transparent
+
+.p-rec
+	&__rec
+		margin-right: 12px
+		color: #656c7a
+		font-size: 13px
+		font-family: "ProximaNovaBold", sans-serif
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #656c7a
+		i
+			font-size: 14px
+			color: #f05f70
+		span
+			position: relative
+			font-size: 11px
+			font-weight: 700
+			padding: 2px 5px 3px
+			background: #e7e9ee
+			border-radius: 2px
+			margin-left: 2px
+			font-family: "ProximaNovaRegular", sans-serif
+	&__pod
+		color: #656c7a
+		font-size: 13px
+		font-family: "ProximaNovaBold", sans-serif
+		&:hover
+			text-decoration: none
+			color: #656c7a
+
+.p-textarea
+	padding-left: 60px
+	position: relative
+	height: 48px
+	width: 100%
+	margin-bottom: 20px
+	&__icon
+		width: 48px
+		height: 48px
+		overflow: hidden
+		position: absolute
+		left: 0
+		top: 0
+		img
+			display: block
+			width: 100%
+	&__textarea
+		display: block
+		width: 100%
+		height: 48px
+		resize: none
+		font-size: 14px
+		color: #2a2e2e
+		padding: 6px 10px 8px
+
+.f-logo
+	display: inline-block
+	svg
+		width: 115px
+		display: block
+		fill: #bfbfbf
+
+
+.f-copy
+	font-size: 11px
+	line-height: 15px
+	color: #333333
+	margin: 36px 0 30px
+	a
+		color: #e2223f
+		text-decoration: underline
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #e2223f
+		&:active
+			text-decoration: none
+
+.f-nav
+	margin: 15px 0 35px
+	&__item
+		display: inline-block
+		margin-left: 50px
+		&:first-child
+			margin-left: 0
+	&__link
+		color: #999
+		text-transform: uppercase
+		&:hover, &:focus, &:active
+			color: #999
+			text-decoration: underline
+		&:active
+			text-decoration: none
+
+.f-social
+	&__item
+	&__link
