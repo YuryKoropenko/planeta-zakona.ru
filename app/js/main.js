@@ -22,12 +22,14 @@ $(function() {
 
 
 	/*поиск по сайту*/
-	$('.h-search-button').on('click', function() {
-		$('.header__h-nav').toggle();
-		$('.header__h-wrapper').toggle();
-		$('.header__h-sitesearch').toggle();
-		return false;
-	});
+	if ( $(window).width() > 992 ) {
+		$('.h-search-button').on('click', function() {
+			$('.header__h-nav').toggle();
+			$('.header__h-wrapper').toggle();
+			$('.header__h-sitesearch').toggle();
+			return false;
+		});
+	}
 	$('.h-dispatch__close').on('click', function() {
 		$('.header__h-sitesearch').hide();
 		$('.header__h-nav').show();
@@ -42,6 +44,63 @@ $(function() {
 	}, function() {
 		$(this).children('.p-info__hidden').hide();
 		$(this).children('.p-info__text').show();
+	});
+
+	/*якорь*/
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() != 0)
+				$('.scroller').show();
+			else
+			$('.scroller').hide();
+		});
+	});
+	$(".scroller").on("click", function() {
+		$('html, body').animate({scrollTop:0}, 'slow');
+		return false
+	});
+
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() != 0)
+				$('.p-info__share-mob').show();
+			else
+			$('.p-info__share-mob').hide();
+		});
+	});
+
+	
+
+	/*mob-menu*/
+	$('.mob-nav__button').on('click', function() {
+		$('.m-leftmob').css('left', '0');
+		return false;
+	})
+	$('.m-leftmob__button').on('click', function() {
+		$(this).toggleClass('m-leftmob__button-active');
+		$(this).parent().children('.m-leftmob__submenu').slideToggle(300);
+	});
+	$('.m-leftmob__close').on('click', function() {
+		$('.m-leftmob').css('left', '-320px');
+		return false;
+	});
+
+	$('.h-social__link-mob').on('click', function() {
+		$('.m-rassmob').toggleClass('m-rassmob-active');
+		return false;
+	});
+
+	if ( $(window).width() < 992 ) {
+		$('.h-search-button').on('click', function() {
+			$('.m-searchmob').toggleClass('m-searchmob-active');
+			return false;
+		});
+	}
+
+	$('.p-path__slider').owlCarousel({
+		loop:true,
+		nav:true,
+		items:1
 	});
 
 	/*скрипт на троеточие*/

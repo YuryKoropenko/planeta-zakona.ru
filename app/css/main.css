@@ -1362,7 +1362,7 @@ body {
 .p-tags {
   display: block;
   width: 100%;
-  padding: 10px 13px 10px 29px;
+  padding: 10px 13px 0 29px;
   background: #ededed;
   position: relative;
 }
@@ -1386,6 +1386,7 @@ body {
 .p-tags__item {
   display: inline-block;
   padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .p-tags__link {
@@ -1738,4 +1739,288 @@ body {
 
 .f-nav__link:active {
   text-decoration: none;
+}
+
+.scroller {
+  display: block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 52px;
+  position: fixed;
+  left: 32px;
+  top: 50px;
+  width: 52px;
+  z-index: 99;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+  display: none;
+}
+
+.scroller::after {
+  content: '';
+  background-image: url(../img/btemail-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.m-leftmob {
+  width: 320px;
+  background: #000000;
+  z-index: 100;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: -320px;
+  top: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.m-leftmob__wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.m-leftmob__top {
+  position: relative;
+  padding: 28px 20px 27px;
+  line-height: 20px;
+  border-bottom: 1px solid #303030;
+}
+
+.m-leftmob__title {
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.m-leftmob__close {
+  width: 28px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index: 2;
+  right: 8px;
+  top: 23px;
+}
+
+.m-leftmob__close::before {
+  content: '';
+  height: 28px;
+  width: 2px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -1px;
+}
+
+.m-leftmob__close::after {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.m-leftmob__item {
+  border-bottom: 1px solid #303030;
+  position: relative;
+}
+
+.m-leftmob__item-svg .m-leftmob__link {
+  padding-left: 50px;
+  position: relative;
+}
+
+.m-leftmob__item-svg .m-leftmob__link svg {
+  fill: #e2223f;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.m-leftmob__item-svg .m-leftmob__link:hover svg, .m-leftmob__item-svg .m-leftmob__link:hover svg, .m-leftmob__item-svg .m-leftmob__link:active svg {
+  fill: #fff;
+}
+
+.m-leftmob__link {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.m-leftmob__link:hover, .m-leftmob__link:focus, .m-leftmob__link:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #e2223f;
+}
+
+.m-leftmob__link:active {
+  background-color: transparent;
+}
+
+.m-leftmob .m-leftmob__submenu {
+  display: none;
+}
+
+.m-leftmob .m-leftmob__submenu .m-leftmob__item:last-child {
+  border-bottom: none;
+}
+
+.m-leftmob__button {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.m-leftmob__button::after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-image: url(../img/btemail-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.m-leftmob__button-active::after {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
+.m-leftmob__bottom {
+  padding: 25px 10px 34px;
+}
+
+.m-leftmob__bottom .h-social {
+  text-align: left !important;
+  font-size: 16px !important;
+}
+
+.m-leftmob__bottom .h-social .h-social__item {
+  margin: 8px;
+}
+
+.m-leftmob__bottom .h-social .h-social__link {
+  width: 27px;
+  height: 27px;
+}
+
+.m-leftmob__phone {
+  font-size: 24px;
+  line-height: 22px;
+  color: #ffffff;
+  padding-bottom: 9px;
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.m-leftmob__info {
+  text-align: center;
+  display: block;
+  color: #515151;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.m-searchmob {
+  position: relative;
+  height: 0;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.m-searchmob-active {
+  display: block !important;
+  height: auto !important;
+}
+
+.m-rassmob {
+  position: relative;
+  height: 0;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.m-rassmob-active {
+  display: block !important;
+  height: auto !important;
+}
+
+.m-rassmob__top {
+  display: block;
+  font-size: 18px;
+  font-family: "ProximaNovaBold", sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.m-rassmob__center {
+  padding: 26px 20px;
+  background: #e2223f;
+  position: relative;
+}
+
+.m-rassmob__row {
+  position: relative;
+}
+
+.m-rassmob__input {
+  width: 80% !important;
+  height: 40px;
+}
+
+.m-rassmob__button {
+  height: 34px;
+  width: 34px;
+  margin-top: 3px;
+}
+
+.m-rassmob__description {
+  padding-left: 0;
+  padding-top: 6px;
 }

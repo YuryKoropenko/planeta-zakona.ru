@@ -718,7 +718,7 @@
 .p-tags
 	display: block
 	width: 100%
-	padding: 10px 13px 10px 29px
+	padding: 10px 13px 0 29px
 	background: #ededed
 	position: relative
 	&::before
@@ -736,6 +736,7 @@
 	&__item
 		display: inline-block
 		padding-left: 10px
+		padding-bottom: 10px
 	&__link
 		display: block
 		padding: 10px 20px
@@ -1003,3 +1004,214 @@
 .f-social
 	&__item
 	&__link
+
+.scroller
+	display: block
+	transition: all 0.3s ease
+	cursor: pointer
+	height: 52px
+	position: fixed
+	left: 32px
+	top: 50px
+	width: 52px
+	z-index: 99
+	border-radius: 50%
+	background-color: #c1c1c1
+	display: none
+	&::after
+		content: ''
+		background-image: url(../img/btemail-icon.svg)
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: 16px 16px
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		transform: rotate(-90deg)
+		-webkit-transform: rotate(-90deg)
+
+.m-leftmob
+	width: 320px
+	background: #000000
+	z-index: 100
+	height: 100%
+	overflow: hidden
+	position: fixed
+	left: -320px
+	top: 0
+	@include transition(all 0.3s ease-in-out)
+	&__wrapper
+		width: 100%
+		height: 100%
+		overflow: auto
+	&__top
+		position: relative
+		padding: 28px 20px 27px
+		line-height: 20px
+		border-bottom: 1px solid #303030
+	&__title
+		font-size: 14px
+		color: #6a6a6a
+	&__close
+		width: 28px
+		height: 28px
+		display: block
+		position: absolute
+		transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		z-index: 2
+		right: 8px
+		top: 23px
+		&::before
+			content: ''
+			height: 28px
+			width: 2px
+			background-color: #fff
+			display: block
+			position: absolute
+			left: 50%
+			top: 0
+			margin-left: -1px
+		&::after
+			content: ''
+			width: 28px
+			height: 2px
+			background-color: #fff
+			display: block
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -1px
+	&__center
+	&__item
+		border-bottom: 1px solid #303030
+		position: relative
+		&-svg
+			.m-leftmob__link
+				padding-left: 50px
+				position: relative
+				svg
+					fill: #e2223f
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-50%)
+					-webkit-transform: translateY(-50%)
+				&:hover, &:hover, &:active
+					svg
+						fill: #fff
+	&__link
+		display: block
+		padding: 20px
+		text-decoration: none
+		color: #fff
+		&:hover, &:focus, &:active
+			color: #fff
+			text-decoration: none
+			background-color: #e2223f
+		&:active
+			background-color: transparent
+	.m-leftmob__submenu
+		display: none
+		.m-leftmob__item
+			&:last-child
+				border-bottom: none
+	&__button
+		width: 60px
+		height: 60px
+		position: absolute
+		right: 0
+		z-index: 2
+		top: 0
+		bottom: 0
+		background: rgba(255, 255, 255, 0.15)
+		@include transition(all 0.3s ease-in-out)
+		&::after
+			content: ''
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			display: block
+			background-image: url(../img/btemail-icon.svg)
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 12px 12px
+			@include transition(all 0.3s ease-in-out)
+		&-active
+			&::after
+				transform: rotate(90deg)
+				-webkit-transform: rotate(90deg)
+	&__bottom
+		padding: 25px 10px 34px
+		.h-social
+			text-align: left !important
+			font-size: 16px !important
+			.h-social__item
+				margin: 8px
+			.h-social__link
+				width: 27px
+				height: 27px
+	&__phone
+		font-size: 24px
+		line-height: 22px
+		color: #ffffff
+		padding-bottom: 9px
+		display: block
+		padding-top: 20px
+		text-align: center
+	&__info
+		text-align: center
+		display: block
+		color: #515151
+		font-size: 11px
+		text-transform: uppercase
+
+.m-searchmob
+	position: relative
+	height: 0
+	display: none
+	@include transition(all 0.3s ease-in-out)
+	&-active
+		display: block !important
+		height: auto !important
+
+.m-rassmob
+	position: relative
+	height: 0
+	display: none
+	@include transition(all 0.3s ease-in-out)
+	&-active
+		display: block !important
+		height: auto !important
+	&__top
+		display: block
+		font-size: 18px
+		font-family: "ProximaNovaBold", sans-serif
+		text-align: center
+		padding: 20px 0
+	&__center
+		padding: 26px 20px
+		background: #e2223f
+		position: relative
+	&__row
+		position: relative
+	&__area
+	&__input
+		width: 80% !important
+		height: 40px
+	&__button
+		height: 34px
+		width: 34px
+		margin-top: 3px
+	&__row
+	&__description
+		padding-left: 0
+		padding-top: 6px

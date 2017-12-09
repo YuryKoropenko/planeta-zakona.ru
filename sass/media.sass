@@ -158,11 +158,91 @@
 	.p-title-big
 		font-size: 26px
 		line-height: 26px
+	.p-path
+		display: none
+	.p-path__link
+		text-transform: uppercase
+	.p-path__item
+		display: block
+		width: 100%
+		text-align: center
+		padding-right: 0
+		&::after
+			display: none
+	.owl-nav
+		div
+			text-indent: -9999px
+			width: 7px
+			height: 12px
+			position: absolute
+			display: block
+			z-index: 96
+			top: 50%
+			margin-top: -7px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				width: 100%
+				height: 100%
+				background-image: url(../img/btemail-icon1.svg)
+				background-position: center center
+				background-size: cover
+		.owl-prev
+			left: 0
+			&::after
+				content: ''
+				transform: rotate(180deg)
+				-webkit-transform: rotate(180deg)
+		.owl-next
+			right: 0
+	.p-time__comments
+		display: none
+	.p-time__reading
+		font-size: 13px
+		margin-bottom: 5px
+	.scroller
+		width: 40px
+		height: 40px
+		top: auto
+		bottom: 20px
+		left: 20px
+	.submatnav__item
+		padding-bottom: 8px !important
 	/**/
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
+@media only screen and (max-width : 479px)
+	.p-info__share
+		display: none
+	.p-article
+		width: 50%
+	.p-info__share-mob
+		position: fixed
+		right: 20px
+		top: 20px
+		transform: none
+		-webkit-transform: none
+		z-index: 99
+	footer
+		.h-social__item
+			margin-bottom: 10px
+	.p-autor__img-wp
+		width: 75px
+		height: 75px
+	.p-autor__info
+		width: 118px
+	.p-autor__name
+		line-height: 1.3
+	.p-autor__info .p-autor__link
+		position: static
+		white-space: normal !important
+		line-height: 1.3
 	/**/
 
 
@@ -180,11 +260,15 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
+	.p-info__share-mob
+		display: block !important
 	/**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
+	.p-path__slider
+		display: none !important
 	/**/
 
 
